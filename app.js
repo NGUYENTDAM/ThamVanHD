@@ -3,6 +3,7 @@ const exphbs = require('express-handlebars');
 var express_handlebars_sections = require('express-handlebars-sections');
 const app = express();
 
+app.use(express.static('./public/'));
 app.use(express.urlencoded({
   extended: true
 }));
