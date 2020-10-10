@@ -623,7 +623,8 @@ h1, h2, h3, h4, h5,
 
 @media (max-width: 991.98px) {
   .owl-style .owl-nav {
-    display: none; } }
+    display: none; } 
+}
 
 #loader {
   position: fixed;
