@@ -1,0 +1,182 @@
+{{#section 'css'}}
+<style>
+    body {
+        font-family: Arial;
+    }
+
+    /* Style the tab */
+    .tab {
+        overflow: hidden;
+        border: 1px solid #ccc;
+        background-color: #f1f1f1;
+    }
+
+    /* Style the buttons inside the tab */
+    .tab button {
+        background-color: inherit;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        transition: 0.3s;
+        font-size: 17px;
+    }
+
+    /* Change background color of buttons on hover */
+    .tab button:hover {
+        background-color: #ddd;
+    }
+
+    /* Create an active/current tablink class */
+    .tab button.active {
+        background-color: #ccc;
+    }
+
+    /* Style the tab content */
+    .tabcontent {
+        display: none;
+        padding: 6px 12px;
+        border: 1px solid #ccc;
+        border-top: none;
+    }
+</style>
+{{/section}}
+{{#section 'js'}}
+<script>
+    function openCity(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+</script>
+{{/section}}
+
+<div class="tab">
+    <button style="color: blue;" class="tablinks" id="defaultOpen" onclick="openCity(event, 'London')">Giới
+        Thiệu</button>
+    <button class="tablinks" onclick="openCity(event, 'Paris')">Giáo dục giới tính</button>
+    <button class="tablinks" onclick="openCity(event, 'abc')">Hướng nghiệp</button>
+</div>
+
+<div id="London" class="tabcontent">
+    <div class="container">
+
+        <div class="row" style="width: 155%;">
+
+            <!-- Blog Entries Column -->
+            <div class="col-md-8">
+                <!-- Blog Post -->
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h3 style="color: navy;">Giới thiệu</h3>
+                        <p class="card-text">
+                            Phòng ngừa, hỗ trợ và can thiệp (khi cần thiết) đối với học sinh đang gặp phải khó khăn về
+                            tâm lý trong học tập và cuộc cuộc sống để tìm hướng giải quyết quyết phù hợp, giảm thiểu tác
+                            động tiêu cực có thể xảy ra, góp phần xây dựng môi trường giáo dục an toàn, lành mạnh, thân
+                            thiện và phòng chống bạo lực học đường
+                        <h3 style="color: navy;">Phòng ngừa những vấn đề mà các bạn học sinh THPT thường gặp phải như :
+                        </h3>
+                        - Giáo dục giới tính <br>
+                        - Bạo lực học đường <br>
+                        - Giáo dục hướng nghiệp <br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar Widgets Column -->
+            <div class="col-md-4">
+            </div>
+
+        </div>
+        <!-- /.row -->
+
+    </div>
+</div>
+
+<div id="Paris" class="tabcontent">
+    <div class="container">
+
+        <div class="row" style="width: 155%;">
+
+            <!-- Blog Entries Column -->
+            <div class="col-md-8">
+                <!-- Blog Post -->
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <p class="card-text">
+                        <h3 style="color: navy;"></h3>
+                        <img src="https://i1-giadinh.vnecdn.net/2020/07/28/Giao-duc-1-3169-1595874192.jpg?w=680&h=0&q=100&dpr=1&fit=crop&s=6FJDrR4ptJ2bFokwsRQrqQ&fbclid=IwAR3wZsIJQQkLiw5zaGrCxeKWV-6Wp-iDgKjNzjUqToU_cOxb4lnIHJhRdkU"
+                            style="max-height:50%;max-width:60%;margin-left: 20%;" alt=""><br>
+                        <a
+                            href="https://sogddt.vinhphuc.gov.vn/newsdetail.aspx?ID=15196&CatId=a3823fdd-2f63-46a4-abb3-8726f2266dbf">
+                            https://sogddt.vinhphuc.gov.vn/newsdetail.aspx?ID=15196&CatId=a3823fdd-2f63-46a4-abb3-8726f2266dbf
+                        </a><br>
+                        <a href="https://vn.theasianparent.com/giao-duc-gioi-tinh-cho-hoc-sinh-thpt">
+                            https://vn.theasianparent.com/giao-duc-gioi-tinh-cho-hoc-sinh-thpt
+                        </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar Widgets Column -->
+            <div class="col-md-4">
+            </div>
+        </div>
+        <!-- /.row -->
+
+    </div>
+</div>
+<div id="abc" class="tabcontent">
+    <div class="container">
+
+        <div class="row" style="width: 155%;">
+
+            <!-- Blog Entries Column -->
+            <div class="col-md-8">
+                <!-- Blog Post -->
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <p class="card-text">
+                        <h3 style="color: navy;">GIỚI THIỆU TRẮC NGHIỆM ĐỊNH HƯỚNG NGHỀ NGHIỆP HOLLAND</h3>
+                        John L.Holland (1919 – 2008) là tiến sỹ tâm lý học người Mỹ. Mô hình lý thuyết nghề nghiệp của
+                        ông đã được sử dụng trong thực tiễn hướng nghiệp tại nhiều nước trên thế giới và được đánh giá
+                        rất cao về tính chính xác trong việc khám phá, lựa chọn ngành, nghề phù hợp tính cách, sở thích
+                        của bản thân. <br>
+                        Theo tiến sĩ tâm lý John Holland, có 6 nhóm sở thích nghề nghiệp tương ứng với các loại ngành
+                        nghề khác nhau trong xã hội nhưng có quan hệ với nhau. Đó là: (1) Realistic – tạm dịch là nhóm
+                        Kỹ thuật, (2) Investigate - nhóm Nghiên cứu, (3) Artistic - nhóm Nghệ thuật, (4) Social - nhóm
+                        Xã hội, (5) Enterprising - nhóm Quản lí, (6) Convetional - nhóm nghiệp vụ. <br>
+                        Bộ trắc nghiệm này giúp các bạn tự phát hiện các kiểu người trội nhất đang tiềm ẩn trong con
+                        người mình để tự định hướng con đường nghề nghiệp mà bạn muốn theo đuổi trong tương lai.<br>
+                        <img src="https://t3h.edu.vn/sites/default/files/nghe_nghiep.jpg?fbclid=IwAR1iu1Zv6chj9EdF4VYJVdLXzzCeNvhvR4OkTXN0hLViwnK86RzCHCVI03I"
+                            style="max-height:50%;max-width:60%;margin-left: 20%;" alt=""><br>
+                        <h3 style="color: navy;">TRẮC NGHIỆM</h3>
+                        <a
+                            href="https://www.huongnghiepviet.com/v3/trac-nghiem-huong-nghiep/lam-trac-nghiem-hn-jh">https://www.huongnghiepviet.com/v3/trac-nghiem-huong-nghiep/lam-trac-nghiem-hn-jh</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar Widgets Column -->
+            <div class="col-md-4">
+            </div>
+        </div>
+        <!-- /.row -->
+
+    </div>
+</div>

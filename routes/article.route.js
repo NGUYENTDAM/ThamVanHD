@@ -33,6 +33,9 @@ router.get('/giaoduc', function (req, res) {
 router.get('/thamvan', function (req, res) {
   res.render('vwArticles/thamvan');
 })
+router.get('/phongngua', function (req, res) {
+  res.render('vwArticles/phongngua');
+})
 
 
 
